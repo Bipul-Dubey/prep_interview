@@ -8,6 +8,7 @@
       "executor": "@nx/next:build",
       "outputs": ["dist/apps/frontend"],
       "options": {
+        "postcssConfig": "apps/frontend/postcss.config.js",
         "outputPath": "apps/frontend/dist",
         "root": "apps/frontend"
       }
