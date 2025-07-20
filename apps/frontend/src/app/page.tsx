@@ -1,11 +1,12 @@
 import React from 'react';
-import { ShowDesignSystem } from '@platform/design-system';
+import DefaultExport, { NamedExport } from '@platform/design-system';
 
 const Page = () => {
   return (
     <div>
       Page
-      <ShowDesignSystem />
+      <DefaultExport />
+      <NamedExport />
     </div>
   );
 };
