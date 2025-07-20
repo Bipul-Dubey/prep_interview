@@ -1,5 +1,5 @@
 import React from 'react';
-import DefaultExport, { NamedExport } from '@platform/design-system';
+import DefaultExport, { NamedExport } from '@workspace/design-system';
 
 const Page = () => {
   return (

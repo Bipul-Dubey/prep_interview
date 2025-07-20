@@ -1,28 +1,28 @@
 {
-  "name": "frontend",
+  "name": "platform",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "apps/frontend/src",
+  "sourceRoot": "apps/platform/src",
   "targets": {
     "build": {
       "executor": "@nx/next:build",
-      "outputs": ["dist/apps/frontend"],
+      "outputs": ["dist/apps/platform"],
       "options": {
-        "postcssConfig": "apps/frontend/postcss.config.js",
-        "outputPath": "apps/frontend/dist",
-        "root": "apps/frontend"
+        "postcssConfig": "apps/platform/postcss.config.js",
+        "outputPath": "apps/platform/dist",
+        "root": "apps/platform"
       }
     },
     "serve": {
       "executor": "@nx/next:server",
       "options": {
-        "buildTarget": "frontend:build",
+        "buildTarget": "platform:build",
         "dev": true,
         "port": 3000
       },
       "configurations": {
         "production": {
-          "buildTarget": "frontend:build:production",
+          "buildTarget": "platform:build:production",
           "dev": false
         }
       }
@@ -30,21 +30,21 @@
     "export": {
       "executor": "@nx/next:export",
       "options": {
-        "buildTarget": "frontend:build"
+        "buildTarget": "platform:build"
       }
     },
     "lint": {
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/frontend/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["apps/platform/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["coverage/apps/frontend"],
+      "outputs": ["coverage/apps/platform"],
       "options": {
-        "jestConfig": "apps/frontend/jest.config.ts",
+        "jestConfig": "apps/platform/jest.config.ts",
         "passWithNoTests": true
       }
     },
@@ -55,5 +55,5 @@
       }
     }
   },
-  "tags": ["type:frontend"]
+  "tags": ["type:platform"]
 }

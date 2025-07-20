@@ -19,8 +19,8 @@
     "target": "es2022",
     "customConditions": ["development"],
     "paths": {
-      "@platform/design-system": ["libs/design-system/src/index.ts"],
-      "@platform/design-system/*": ["libs/design-system/src/*"]
+      "@workspace/design-system": ["libs/design-system/src/index.ts"],
+      "@workspace/design-system/*": ["libs/design-system/src/*"]
     }
   }
 }

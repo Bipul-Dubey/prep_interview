@@ -1,5 +1,5 @@
 export default {
-  displayName: '@platform/design-system',
+  displayName: '@workspace/design-system',
   preset: '../../jest.preset.js',
   transform: {
     '^(?!.*\\.(js|jsx|ts|tsx|css|json)$)': '@nx/react/plugins/jest',
