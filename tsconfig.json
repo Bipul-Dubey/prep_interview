@@ -9,5 +9,11 @@
     {
       "path": "./libs/design-system"
     }
-  ]
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"]
+    }
+  }
 }
