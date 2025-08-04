@@ -1,18 +1,15 @@
 {
-  "name": "platform",
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "projectType": "application",
-  "sourceRoot": "apps/platform/src",
   "targets": {
     "build": {
       "executor": "@nx/next:build",
-      "outputs": ["apps/platform/dist"],
+      "outputs": ["{options.outputPath}"],
       "options": {
-        "postcssConfig": "apps/platform/postcss.config.js",
         "outputPath": "apps/platform/dist",
-        "root": "apps/platform"
+        "root": "apps/platform",
+        "postcssConfig": "apps/platform/postcss.config.cjs"
       }
     },
+
     "serve": {
       "executor": "@nx/next:server",
       "options": {
@@ -26,34 +23,6 @@
           "dev": false
         }
       }
-    },
-    "export": {
-      "executor": "@nx/next:export",
-      "options": {
-        "buildTarget": "platform:build"
-      }
-    },
-    "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["apps/platform/**/*.{ts,tsx,js,jsx}"]
-      }
-    },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "outputs": ["coverage/apps/platform"],
-      "options": {
-        "jestConfig": "apps/platform/jest.config.ts",
-        "passWithNoTests": true
-      }
-    },
-    "typecheck": {
-      "executor": "nx:run-commands",
-      "options": {
-        "command": "tsc --noEmit"
-      }
     }
-  },
-  "tags": ["type:platform"]
+  }
 }
