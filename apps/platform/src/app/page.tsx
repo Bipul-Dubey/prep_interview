@@ -1,13 +1,13 @@
 import React from 'react';
-import DefaultExport, { Button, NamedExport } from '@workspace/design-system';
+import { Button } from '@workspace/design-system';
 
 const Page = () => {
   return (
     <div className="text-[var(--sidebar-ring)]">
       Page
-      <DefaultExport />
-      <NamedExport />
-      <Button variant={'destructive'}>Example</Button>
+      <Button variant="destructive" className="mt-8">
+        Shadcn Button – should be red
+      </Button>
     </div>
   );
 };
