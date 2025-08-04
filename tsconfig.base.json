@@ -20,7 +20,7 @@
     "customConditions": ["development"],
     "paths": {
       "@workspace/design-system": ["libs/design-system/src/index.ts"],
-      "@workspace/design-system/*": ["libs/design-system/src/*"]
+      "@workspace/design-system/utils": ["libs/design-system/src/lib/utils.ts"]
     }
   }
 }

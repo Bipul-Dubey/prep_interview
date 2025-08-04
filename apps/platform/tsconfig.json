@@ -28,7 +28,7 @@
   },
   "include": [
     "../../apps/platform/.next/types/**/*.ts",
-    "../../dist/apps/platform/.next/types/**/*.ts",
+    "../../apps/platform/dist/.next/types/**/*.ts",
     "next-env.d.ts",
     "src/**/*.js",
     "src/**/*.jsx",
@@ -47,5 +47,10 @@
     "eslint.config.js",
     "eslint.config.cjs",
     "eslint.config.mjs"
+  ],
+  "references": [
+    {
+      "path": "../../libs/design-system"
+    }
   ]
 }

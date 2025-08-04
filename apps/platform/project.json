@@ -6,7 +6,7 @@
   "targets": {
     "build": {
       "executor": "@nx/next:build",
-      "outputs": ["dist/apps/platform"],
+      "outputs": ["apps/platform/dist"],
       "options": {
         "postcssConfig": "apps/platform/postcss.config.js",
         "outputPath": "apps/platform/dist",
